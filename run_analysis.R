@@ -1,6 +1,6 @@
 ###############################################################
 # Things to submit:
-# 1. To GitHub: This R script file entitled run_analysis.R.
+# 1. To GitHub: This R script file entitled "run_analysis.R".
 # 2. To GitHub: README.md.
 # 3. To GitHub: CodeBook.md.
 # 4. To Coursera: Tidy Data Set ("DATASET_TIDY.txt").
