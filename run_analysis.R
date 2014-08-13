@@ -65,13 +65,3 @@ df_X_merge_final_out <- aggregate(df_X_merge_final[ ,3:88], list(SubjectNo=df_X_
 df_X_merge_final_out <- df_X_merge_final_out[order(df_X_merge_final_out$SubjectNo, df_X_merge_final_out$ActName), ]
 # Output the tidy data set.
 write.table(df_X_merge_final_out, file="DATASET_TIDY.txt", sep=" ", row.names=F)
-
-
-
-##########################################
-## Temp Code Book
-# ActCode, ActName
-
-##########################################
-#### Help ###
-# Good thread, https://class.coursera.org/getdata-006/forum/thread?thread_id=43
