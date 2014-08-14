@@ -1,10 +1,12 @@
 DATA DICTIONARY
 ===============
-# A list of the variables in the tidy dataset, is as follows:
+### This is a list of variables in the tidy dataset.
+- Refer to the *features_info.txt* given by the instructor for more details about the measured variables.
 
 **Variable Name** | **Explanation**
+--- | ---
 SubjectNo | The anonymizing ID of the subject person under observation. Ranges from 1 to 30.
-ActName | Activity Name. Total of 6 valid values, as follows: WALKING/WALKING_UPSTAIRS/WALKING_DOWNSTAIRS/SITTING/STANDING/LAYING.
+ActName | Activity Name. Total of 6 valid values, as follows: * WALKING / WALKING_UPSTAIRS / WALKING_DOWNSTAIRS / SITTING / STANDING / LAYING * .
 tBodyAcc-mean()-X | A measured variable.
 tBodyAcc-mean()-Y | A measured variable.
 tBodyAcc-mean()-Z | A measured variable.
@@ -91,3 +93,8 @@ angle(tBodyGyroJerkMean,gravityMean) | A measured variable.
 angle(X,gravityMean) | A measured variable.
 angle(Y,gravityMean) | A measured variable.
 angle(Z,gravityMean) | A measured variable.
+
+---
+## Resources
+- Markdown Cheatsheet, [https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [http://markdown-here.com/livedemo.html](http://markdown-here.com/livedemo.html) allows you see what your Markdown code looks like, in real time. This way, you don't have to keep uploading your markdown to GitHub in order to see the results.
