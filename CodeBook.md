@@ -1,92 +1,93 @@
-CodeBook
-========
+DATA DICTIONARY
+===============
 # A list of the variables in the tidy dataset, is as follows:
 
-SubjectNo
-ActName
-tBodyAcc-mean()-X
-tBodyAcc-mean()-Y
-tBodyAcc-mean()-Z
-tBodyAcc-std()-X
-tBodyAcc-std()-Y
-tBodyAcc-std()-Z
-tGravityAcc-mean()-X
-tGravityAcc-mean()-Y
-tGravityAcc-mean()-Z
-tGravityAcc-std()-X
-tGravityAcc-std()-Y
-tGravityAcc-std()-Z
-tBodyAccJerk-mean()-X
-tBodyAccJerk-mean()-Y
-tBodyAccJerk-mean()-Z
-tBodyAccJerk-std()-X
-tBodyAccJerk-std()-Y
-tBodyAccJerk-std()-Z
-tBodyGyro-mean()-X
-tBodyGyro-mean()-Y
-tBodyGyro-mean()-Z
-tBodyGyro-std()-X
-tBodyGyro-std()-Y
-tBodyGyro-std()-Z
-tBodyGyroJerk-mean()-X
-tBodyGyroJerk-mean()-Y
-tBodyGyroJerk-mean()-Z
-tBodyGyroJerk-std()-X
-tBodyGyroJerk-std()-Y
-tBodyGyroJerk-std()-Z
-tBodyAccMag-mean()
-tBodyAccMag-std()
-tGravityAccMag-mean()
-tGravityAccMag-std()
-tBodyAccJerkMag-mean()
-tBodyAccJerkMag-std()
-tBodyGyroMag-mean()
-tBodyGyroMag-std()
-tBodyGyroJerkMag-mean()
-tBodyGyroJerkMag-std()
-fBodyAcc-mean()-X
-fBodyAcc-mean()-Y
-fBodyAcc-mean()-Z
-fBodyAcc-std()-X
-fBodyAcc-std()-Y
-fBodyAcc-std()-Z
-fBodyAcc-meanFreq()-X
-fBodyAcc-meanFreq()-Y
-fBodyAcc-meanFreq()-Z
-fBodyAccJerk-mean()-X
-fBodyAccJerk-mean()-Y
-fBodyAccJerk-mean()-Z
-fBodyAccJerk-std()-X
-fBodyAccJerk-std()-Y
-fBodyAccJerk-std()-Z
-fBodyAccJerk-meanFreq()-X
-fBodyAccJerk-meanFreq()-Y
-fBodyAccJerk-meanFreq()-Z
-fBodyGyro-mean()-X
-fBodyGyro-mean()-Y
-fBodyGyro-mean()-Z
-fBodyGyro-std()-X
-fBodyGyro-std()-Y
-fBodyGyro-std()-Z
-fBodyGyro-meanFreq()-X
-fBodyGyro-meanFreq()-Y
-fBodyGyro-meanFreq()-Z
-fBodyAccMag-mean()
-fBodyAccMag-std()
-fBodyAccMag-meanFreq()
-fBodyBodyAccJerkMag-mean()
-fBodyBodyAccJerkMag-std()
-fBodyBodyAccJerkMag-meanFreq()
-fBodyBodyGyroMag-mean()
-fBodyBodyGyroMag-std()
-fBodyBodyGyroMag-meanFreq()
-fBodyBodyGyroJerkMag-mean()
-fBodyBodyGyroJerkMag-std()
-fBodyBodyGyroJerkMag-meanFreq()
-angle(tBodyAccMean,gravity)
-angle(tBodyAccJerkMean),gravityMean)
-angle(tBodyGyroMean,gravityMean)
-angle(tBodyGyroJerkMean,gravityMean)
-angle(X,gravityMean)
-angle(Y,gravityMean)
-angle(Z,gravityMean)
+**Variable Name** | **Explanation**
+SubjectNo | The anonymizing ID of the subject person under observation. Ranges from 1 to 30.
+ActName | Activity Name. Total of 6 valid values, as follows: WALKING/WALKING_UPSTAIRS/WALKING_DOWNSTAIRS/SITTING/STANDING/LAYING.
+tBodyAcc-mean()-X | A measured variable.
+tBodyAcc-mean()-Y | A measured variable.
+tBodyAcc-mean()-Z | A measured variable.
+tBodyAcc-std()-X | A measured variable.
+tBodyAcc-std()-Y | A measured variable.
+tBodyAcc-std()-Z | A measured variable.
+tGravityAcc-mean()-X | A measured variable.
+tGravityAcc-mean()-Y | A measured variable.
+tGravityAcc-mean()-Z | A measured variable.
+tGravityAcc-std()-X | A measured variable.
+tGravityAcc-std()-Y | A measured variable.
+tGravityAcc-std()-Z | A measured variable.
+tBodyAccJerk-mean()-X | A measured variable.
+tBodyAccJerk-mean()-Y | A measured variable.
+tBodyAccJerk-mean()-Z | A measured variable.
+tBodyAccJerk-std()-X | A measured variable.
+tBodyAccJerk-std()-Y | A measured variable.
+tBodyAccJerk-std()-Z | A measured variable.
+tBodyGyro-mean()-X | A measured variable.
+tBodyGyro-mean()-Y | A measured variable.
+tBodyGyro-mean()-Z | A measured variable.
+tBodyGyro-std()-X | A measured variable.
+tBodyGyro-std()-Y | A measured variable.
+tBodyGyro-std()-Z | A measured variable.
+tBodyGyroJerk-mean()-X | A measured variable.
+tBodyGyroJerk-mean()-Y | A measured variable.
+tBodyGyroJerk-mean()-Z | A measured variable.
+tBodyGyroJerk-std()-X | A measured variable.
+tBodyGyroJerk-std()-Y | A measured variable.
+tBodyGyroJerk-std()-Z | A measured variable.
+tBodyAccMag-mean() | A measured variable.
+tBodyAccMag-std() | A measured variable.
+tGravityAccMag-mean() | A measured variable.
+tGravityAccMag-std() | A measured variable.
+tBodyAccJerkMag-mean() | A measured variable.
+tBodyAccJerkMag-std() | A measured variable.
+tBodyGyroMag-mean() | A measured variable.
+tBodyGyroMag-std() | A measured variable.
+tBodyGyroJerkMag-mean() | A measured variable.
+tBodyGyroJerkMag-std() | A measured variable.
+fBodyAcc-mean()-X | A measured variable.
+fBodyAcc-mean()-Y | A measured variable.
+fBodyAcc-mean()-Z | A measured variable.
+fBodyAcc-std()-X | A measured variable.
+fBodyAcc-std()-Y | A measured variable.
+fBodyAcc-std()-Z | A measured variable.
+fBodyAcc-meanFreq()-X | A measured variable.
+fBodyAcc-meanFreq()-Y | A measured variable.
+fBodyAcc-meanFreq()-Z | A measured variable.
+fBodyAccJerk-mean()-X | A measured variable.
+fBodyAccJerk-mean()-Y | A measured variable.
+fBodyAccJerk-mean()-Z | A measured variable.
+fBodyAccJerk-std()-X | A measured variable.
+fBodyAccJerk-std()-Y | A measured variable.
+fBodyAccJerk-std()-Z | A measured variable.
+fBodyAccJerk-meanFreq()-X | A measured variable.
+fBodyAccJerk-meanFreq()-Y | A measured variable.
+fBodyAccJerk-meanFreq()-Z | A measured variable.
+fBodyGyro-mean()-X | A measured variable.
+fBodyGyro-mean()-Y | A measured variable.
+fBodyGyro-mean()-Z | A measured variable.
+fBodyGyro-std()-X | A measured variable.
+fBodyGyro-std()-Y | A measured variable.
+fBodyGyro-std()-Z | A measured variable.
+fBodyGyro-meanFreq()-X | A measured variable.
+fBodyGyro-meanFreq()-Y | A measured variable.
+fBodyGyro-meanFreq()-Z | A measured variable.
+fBodyAccMag-mean() | A measured variable.
+fBodyAccMag-std() | A measured variable.
+fBodyAccMag-meanFreq() | A measured variable.
+fBodyBodyAccJerkMag-mean() | A measured variable.
+fBodyBodyAccJerkMag-std() | A measured variable.
+fBodyBodyAccJerkMag-meanFreq() | A measured variable.
+fBodyBodyGyroMag-mean() | A measured variable.
+fBodyBodyGyroMag-std() | A measured variable.
+fBodyBodyGyroMag-meanFreq() | A measured variable.
+fBodyBodyGyroJerkMag-mean() | A measured variable.
+fBodyBodyGyroJerkMag-std() | A measured variable.
+fBodyBodyGyroJerkMag-meanFreq() | A measured variable.
+angle(tBodyAccMean,gravity) | A measured variable.
+angle(tBodyAccJerkMean),gravityMean) | A measured variable.
+angle(tBodyGyroMean,gravityMean) | A measured variable.
+angle(tBodyGyroJerkMean,gravityMean) | A measured variable.
+angle(X,gravityMean) | A measured variable.
+angle(Y,gravityMean) | A measured variable.
+angle(Z,gravityMean) | A measured variable.

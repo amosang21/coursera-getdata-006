@@ -44,24 +44,29 @@ rm(list = c("df_subject_train", "df_y_train", "df_X_train", "df_subject_test", "
 ### (2) Extract only the measurements on the mean and standard deviation for each measurement.
 # Notice that all measurements pertaining to mean or standard deviation, have certain keywords in the column names. We only want these columns.
 df_X_merge_small <- df_X_merge[ , grep("Mean|mean|std()", df_features$FeatureName)]
+# Putting together the Subject, Activity Labels, and Measurements, to get the full ("big") dataset.
+df_X_merge_final <- cbind(df_subject_merge, df_y_merge, df_X_merge_small)
 
 
 ### (3) Use descriptive activity names to name the activities in the data set.
 # Merge df_actlab and df_y_merge. This matches the ActivityNames to the ActivityCodes in df_y_merge.
-df_y_act_merge <- merge(x = df_y_merge, y = df_actlab, by.X = "ActCode", by.Y = "ActCode")
+df_X_merge_final <- merge(x = df_actlab, y = df_X_merge_final, by.X = "ActCode", by.Y = "ActCode")
+df_X_merge_final$ActCode <- NULL  # Delete the ActCode column. Not needed as we have ActName already.
+
+# Tidying up df_X_merge_final.
+df_X_merge_final <- df_X_merge_final[ , c(2, 1, 3:88)]  # Re-ordering the columns, to put SubjectNo first.
+# Sort by SubjectNo and ActName, for more orderliness.
+df_X_merge_final <- df_X_merge_final[order(df_X_merge_final$SubjectNo, df_X_merge_final$ActName), ]
 
 
 ### (4) Appropriately label the data set with descriptive variable names.
 # Notice that this works because we run grep() using the same parameters and operands as in the earlier call, so the same columns are selected.
-colnames(df_X_merge_small) <- df_features[grep("Mean|mean|std()", df_features$FeatureName), "FeatureName"]  # Add the FeatureNames as the column names. Should be 86 columns. 
+colnames(df_X_merge_final)[3:88] <- as.character(df_features[grep("Mean|mean|std()", df_features$FeatureName), "FeatureName"])  # Add the FeatureNames as the column names. Should be 86 columns. 
 
 
 ### (5) Create a second, independent tidy data set with the average of each variable, for each activity, and each subject.
-# First, cbind the subject and the activity he did, with the main dataset.
-df_X_merge_final <- cbind(df_subject_merge, df_y_act_merge, df_X_merge_small) # cbind subject and activty to df_X_merge_small. All datasets should have the same number of rows.
-df_X_merge_final$ActCode <- NULL  # Delete the ActCode column. Not needed as we have ActName already.
 df_X_merge_final_out <- aggregate(df_X_merge_final[ ,3:88], list(SubjectNo=df_X_merge_final$SubjectNo, ActName=df_X_merge_final$ActName), mean)  # See how to use aggregate() here: http://davetang.org/muse/2013/05/22/using-aggregate-and-apply-in-r/
-# Sort by SubjectNo and ActName, for more orderliness.
+# Sort again by SubjectNo and ActName, for more orderliness in the output file.
 df_X_merge_final_out <- df_X_merge_final_out[order(df_X_merge_final_out$SubjectNo, df_X_merge_final_out$ActName), ]
 # Output the tidy data set.
 write.table(df_X_merge_final_out, file="DATASET_TIDY.txt", sep=" ", row.names=F)
