@@ -70,3 +70,5 @@ df_X_merge_final_out <- aggregate(df_X_merge_final[ ,3:88], list(SubjectNo=df_X_
 df_X_merge_final_out <- df_X_merge_final_out[order(df_X_merge_final_out$SubjectNo, df_X_merge_final_out$ActName), ]
 # Output the tidy data set.
 write.table(df_X_merge_final_out, file="DATASET_TIDY.txt", sep=" ", row.names=F)
+# Optional: Use the code below to read the output file back into R again.
+temp_df <- read.table(file="DATASET_TIDY.txt", sep=" ", header = T)
