@@ -1,7 +1,7 @@
 DATA DICTIONARY
 ===============
 ### This is a list of variables in the tidy dataset.
-- Refer to the *features_info.txt* given by the instructor for more details about the measured variables.
+- Please refer to the *features_info.txt* given by the instructor for more details about the measured variables.
 
 **Variable Name** | **Explanation**
 --- | ---
@@ -95,6 +95,3 @@ angle(Y,gravityMean) | A measured variable.
 angle(Z,gravityMean) | A measured variable.
 
 ---
-## Resources
-- Markdown Cheatsheet, [https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-- [http://markdown-here.com/livedemo.html](http://markdown-here.com/livedemo.html) allows you see what your Markdown code looks like, in real time. This way, you don't have to keep uploading your markdown to GitHub in order to see the results.
